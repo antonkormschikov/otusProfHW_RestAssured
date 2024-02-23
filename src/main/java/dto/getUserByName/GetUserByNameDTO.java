@@ -1,15 +1,19 @@
 
-package dto;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
+package dto.getUserByName;
 
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO {
+public class GetUserByNameDTO {
 
     private String email;
     private String firstName;
@@ -19,5 +23,6 @@ public class UserDTO {
     private String phone;
     private Long userStatus;
     private String username;
+
 
 }

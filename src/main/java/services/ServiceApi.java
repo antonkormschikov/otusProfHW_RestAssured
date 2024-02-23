@@ -1,6 +1,8 @@
 package services;
 
-import dto.UserDTO;
+import dto.getUserByName.GetUserByNameDTO;
+import dto.createUser.UserDTO;
+import dto.updateUser.UpdateUserDTO;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -20,11 +22,27 @@ public class ServiceApi {
     public ValidatableResponse createUser(UserDTO user){
 
         return  given(spec)
-
                 .basePath(BASE_PATH)
                 .body(user)
                 .when()
                 .post()
+                .then()
+                .log().all();
+    }
+    public ValidatableResponse getUserByName(String userByName){
+        return given(spec)
+                .basePath(BASE_PATH)
+                .when()
+                .get("/"+userByName)
+                .then()
+                .log().all();
+    }
+    public ValidatableResponse putUser (UpdateUserDTO updateUser,String userName){
+        return given(spec)
+                .basePath(BASE_PATH)
+                .body(updateUser)
+                .when()
+                .put("/"+userName)
                 .then()
                 .log().all();
     }
