@@ -1,5 +1,5 @@
 
-package dto.getUserByName;
+package dto.getuserbyname;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
@@ -13,16 +13,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetUserByNameResponseDTO {
-
-
-    private String email;
-    private String firstName;
-    private Long id;
-    private String lastName;
-    private String password;
-    private String phone;
-    private Long userStatus;
-    private String username;
-
-
+  private String email;
+  private String firstName;
+  private Long id;
+  private String lastName;
+  private String password;
+  private String phone;
+  private Long userStatus;
+  private String username;
 }

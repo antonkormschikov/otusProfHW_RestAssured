@@ -1,5 +1,5 @@
 
-package dto.updateUser;
+package dto.createuser;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
@@ -12,9 +12,8 @@ import lombok.NoArgsConstructor;
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateUserResponseDTO {
-    private int code;
-    private String message;
-    private String type;
-
+public class UserResponseDTO {
+  private Long code;
+  private String message;
+  private String type;
 }
