@@ -1,7 +1,10 @@
 
-package dto.deleteuser;
+package dto.getuserbyname;
+
+import javax.annotation.Generated;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,10 +15,9 @@ import lombok.NoArgsConstructor;
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @AllArgsConstructor
 @NoArgsConstructor
+public class GetUserByNameResponse404DTO {
 
-public class DeleteUserResponseDTO {
-
-  private int code;
+  private Long code;
   private String message;
   private String type;
 
