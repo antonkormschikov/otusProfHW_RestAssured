@@ -20,7 +20,7 @@ public class CreateAndGetUserByNameNegativeTest {
   @Test
 public void checkGetUserByUserName404(){
     //Проверка запроса пользователя по несуществующему имени
-    ValidatableResponse response = userApi.getUserByName404(userNameI+"--");
+    ValidatableResponse response = userApi.getUserByName404(userNameI+"007");
     GetUserByNameResponse404DTO actualData =response.extract().body().as(GetUserByNameResponse404DTO.class);
     Assertions.assertAll("Check error 404 getUserByName",
         () -> Assertions.assertEquals(1,actualData.getCode(),"Incorrect code"),

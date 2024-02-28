@@ -15,8 +15,8 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 public class ServiceApi {
-  private final String baseurl=System.getProperty("base.url","https://petstore.swagger.io/v2");
-  private final String basepath="/user";
+  private final String baseurl = System.getProperty("base.url", "https://petstore.swagger.io/v2");
+  private final String basepath = "/user";
   private RequestSpecification spec;
   public ServiceApi(){
     spec=given()

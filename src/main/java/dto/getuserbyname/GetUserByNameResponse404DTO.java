@@ -1,7 +1,4 @@
-
 package dto.getuserbyname;
-
-import javax.annotation.Generated;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

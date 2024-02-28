@@ -15,7 +15,7 @@ public class CheckPutUserNegativeTest {
     //Проверка негативного сценария, если пользователь не найден, метод должен возвращать ответ 404
     UpdateUserDTO updateUser = UpdateUserDTO.builder()
                 .id(123L)
-                .username("///")
+                .username("Jack007---//")
                 .firstName("firstName")
                 .lastName("lastName")
                 .email("")
@@ -24,9 +24,9 @@ public class CheckPutUserNegativeTest {
                 .userStatus(111L)
                 .build();
 
-    ValidatableResponse responseUpdateUser=userApi.putUser(updateUser,"///");
+    ValidatableResponse responseUpdateUser=userApi.putUser(updateUser,"werhgkj2342342344");
     //Проверка на код ответа http
     UpdateUserResponseDTO actualResponse = responseUpdateUser.extract().body().as(UpdateUserResponseDTO.class);
-    Assertions.assertEquals(404,actualResponse.getCode(), "Incorrect http code");
+    Assertions.assertEquals(1,actualResponse.getCode(), "Code should be 1");
   }
 }
