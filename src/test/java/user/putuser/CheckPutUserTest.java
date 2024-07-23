@@ -4,6 +4,7 @@ import dto.createuser.UserDTO;
 import dto.getuserbyname.GetUserByNameResponseDTO;
 import dto.updateuser.UpdateUserDTO;
 import dto.updateuser.UpdateUserResponseDTO;
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.*;
 import services.ServiceApi;
@@ -36,6 +37,7 @@ public class CheckPutUserTest {
   }
 
   @Test
+  @Step("checkPutUser")
   public void checkPutUser(){
 
     ValidatableResponse response = userApi.getUserByName(userNameI);

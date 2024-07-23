@@ -1,8 +1,7 @@
-timout(60) {
+timeout(60) {
     node("maven"){
         def testContainerName = "api_tests_$BUILD_NUMBER"
         try {
-            def testContainerName = "api_tests_$BUILD_NUMBER"
             stage("Run API tests") {
                 sh "docker run --rm --network=host --name $testContainerName -v $pwd/allure-rezults:/home/anton/target/allure-rezults -t api-tests"
             }

@@ -2,6 +2,7 @@ package user.getuserbyname;
 
 import dto.createuser.UserDTO;
 import dto.getuserbyname.GetUserByNameResponseDTO;
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.*;
 import services.ServiceApi;
@@ -31,6 +32,7 @@ public void deleteUser(){
   }
 
   @Test
+  @Step("checkCreateUserGetUserByUserName")
 public void checkCreateUserGetUserByUserName(){
     //Запрос пользователя по имени
     ValidatableResponse response = userApi.getUserByName(userNameI);

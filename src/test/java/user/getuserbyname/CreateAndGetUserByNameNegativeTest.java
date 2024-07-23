@@ -3,6 +3,7 @@ package user.getuserbyname;
 import dto.createuser.UserDTO;
 import dto.getuserbyname.GetUserByNameResponse404DTO;
 import dto.getuserbyname.GetUserByNameResponseDTO;
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -18,6 +19,7 @@ public class CreateAndGetUserByNameNegativeTest {
   private String emailI="jack@mail.com";
 
   @Test
+  @Step("checkGetUserByUserName404")
 public void checkGetUserByUserName404(){
     //Проверка запроса пользователя по несуществующему имени
     ValidatableResponse response = userApi.getUserByName404(userNameI+"007");

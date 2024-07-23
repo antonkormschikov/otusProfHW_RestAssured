@@ -2,6 +2,7 @@ package user.putuser;
 
 import dto.updateuser.UpdateUserDTO;
 import dto.updateuser.UpdateUserResponseDTO;
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,7 +11,7 @@ import services.ServiceApi;
 public class CheckPutUserNegativeTest {
   ServiceApi userApi = new ServiceApi();
   @Test
-
+  @Step("checkPutUserNegative404")
   public void checkPutUserNegative404(){
     //Проверка негативного сценария, если пользователь не найден, метод должен возвращать ответ 404
     UpdateUserDTO updateUser = UpdateUserDTO.builder()
