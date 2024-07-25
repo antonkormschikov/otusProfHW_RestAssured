@@ -12,12 +12,8 @@ timeout(60) {
                 ])
             }
             stage("Telegram notification"){
-                /*   def allureReport readFile text: $pwd/allure-results/export/influxDbData.txt
-                   HttpClient client = HttpClient.newHttpClient();
-                   HttpRequest request = HttpRequest.newBuilder()
-                                                    .uri(URI.create("http://example.com/resource"))
-                                                    .POST()
-                                                    .build();*/
+                sh "curl -s -X POST https://api.telegram.org/bot7460003126:AAGHETwA70UMIQokbKS9_hJaOR7eOeDCWKo/sendMessage -d chat_id=-4272423291 -d text=\"very simple text\""
+
             }
         } finally {
             sh "docker stop $testContainerName"
